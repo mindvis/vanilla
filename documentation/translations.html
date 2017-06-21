@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>Translations | One Click Documentation</title>
+    <meta name="description" content="One Click Forum">
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#EE6E73">
+    <!-- CSS-->
+    <link href="css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+
+    <header>
+
+      <nav class="top-nav">
+        <div class="container">
+          <div class="nav-wrapper"><a class="page-title">Translations</a></div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <a href="#" data-activates="nav-mobile" class="button-collapse top-nav"><i class="mdi-navigation-menu"></i></a>
+      </div>
+
+      <ul id="nav-mobile" class="side-nav fixed">
+        <li class="logo"><a id="logo-container" href="index.html" class="brand-logo"><img src="images/logo.png" alt="ONE CLICK FORUM" /></a></li>
+        <li class="bold"><a href="files.html" class="waves-effect waves-teal">Files</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li class="bold"><a class="collapsible-header waves-effect waves-teal">Installation</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="one-click-installation.html">One Click Installation</a></li>
+                  <li><a href="installation-form.html">Installation Form</a></li>
+                  <li><a href="manual-installation.html">Manual Installation</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Customization</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="theme-options.html">Theme Options</a></li>
+                  <li><a href="style-editor.html">Style Editor</a></li>
+                  <li><a href="preview-styles.html">Preview Styles</a></li>
+                  <li><a href="custom-style.html">Custom Style</a></li>
+                  <li><a href="import-export.html">Import & Export</a></li>
+                  <li><a href="edit-style-info.html">Edit Style Info</a></li>
+                  <li><a href="expandable-collapsible.html">Expandable & Collapsible</a></li>
+                  <li><a href="layout-selector.html">Layout Selector</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="bold"><a class="collapsible-header waves-effect waves-teal active">Settings</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="footer-sidebar.html">Footer & Sidebar</a></li>
+                  <li><a href="extra-pages.html">Extra Pages</a></li>
+                  <li><a href="plugins.html">Plugins</a></li>
+                  <li class="active"><a href="translations.html">Translations</a></li>
+                  <li><a href="forum.html">Forum</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="bold"><a href="history.html" class="waves-effect waves-teal">History</a></li>
+      </ul>
+    </header>
+
+    <main>
+
+      <div class="section">
+        <div class="container">
+          <div class="row">
+
+            <div class="col s12 m9 l10">
+
+                <p>By default a Vanilla Forum is installed in English. If you want to use it on another language you need to:</p>
+
+                <ol>
+                    <li>download the <a href="http://vanillaforums.org/addon/browse/locales/recent/2/" target="_blank">desired translation (locale)</a></li>
+                    <li>extract the downloaded file:
+                        <code style="display: block; margin-left: 30px;">locale.zip &rarr; DESKTOP\</code>
+                    </li>
+                    <li>
+                        copy the locale folder to the locales directory on your server through FTP
+                        <code style="display: block; margin-left: 30px;">DESKTOP\locale_name &rarr; SERVER_ROOT/public_html/forum/locales/</code>
+                    </li>
+                    <li>go to <i class="path" style="margin-left: 0;">VANILLA BACKOFFICE > ADDONS > LOCALES</i></li>
+                    <li>Enable the locale</li>
+                    <li>and set the Default Locale the one you just enabled</li>
+                    <li>SAVE</li>
+                </ol>
+
+                <div style="margin: 30px 0; background-color: #F1F1F1; padding: 10px 20px;">
+                    <h6><b>When you activate a language the OneClick theme front end is also translated automaticaly to that language.</b></h6>
+                    <p>The OneClick backoffice only support some languages, but if you want you can translate it too by:</p>
+
+                    <ol>
+                        <li>going to <code>SERVER_ROOT/public_html/YOUR_FORUM_DIR/themes/oneClick/locale/</code></li>
+                        <li>copy and existing locale file to a new one <code>en-CA.php &rarr; NEW_LANGUAGE_ID.php</code></li>
+                        <li>you can get the <b>NEW_LANGUAGE_ID</b> by editing the <code>SERVER_ROOT/public_html/YOUR_FORUM_DIR/locales/NEW_LOCALE_DIR/definitions.php</code></li>
+                        <li>and the <b>NEW_LANGUAGE_ID</b> is the one in <code>'Locale' => 'fr'</code>, in this case <b>fr</b></li>
+                        <li>edit the <code>SERVER_ROOT/public_html/YOUR_FORUM_DIR/themes/oneClick/locale/NEW_LANGUAGE_ID.php</code></li>
+                        <li>make the translation from english to the desired language</li>
+                        <li>ex: <code>$Definition['All Discussions'] = 'Discussions Récentes';</code></li>
+                        <li>do the same for all the other translations</li>
+                        <li>SAVE</li>
+                    </ol>
+                </div>
+
+                <div style="margin: 30px 0; background-color: #F1F1F1; padding: 10px 20px;">
+                    <h6><b>You can also customize the forum translations by creating a new file:</b></h6>
+                    <code>SERVER_ROOT/public_html/YOUR_FORUM_DIR/conf/locale.php</code>
+                    <p>For more information please read this:<br/>
+                        <a href="http://docs.vanillaforums.com/developers/locales/" target="_blank">http://docs.vanillaforums.com/developers/locales/</a>
+                    </p>
+                </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="page-footer blue-grey darken-3">
+        <div class="footer-links row">
+            <a id="footer-installation" href="one-click-installation.html" class="col s4 selected">1. INSTALLATION</a>
+            <a id="footer-customization" href="theme-options.html" class="col s4 selected">2. CUSTOMIZATION</a>
+            <a id="footer-settings" href="footer-sidebar.html" class="col s4 selected">3. SETTINGS</a>
+        </div>
+        <div class="footer-copyright">
+          <div class="container" style="overflow: hidden; ">
+            <div id="copyright" class="left center">
+                © 2015 <a href="http://www.creativedreams.eu" target="_blank" class="grey-text text-lighten-4">CREATIVE DREAMS</a>, ALL RIGHTS RESERVED.
+            </div>
+            <div class="right center">
+                <ul id="links">
+                    <li><a href="http://www.one-click-forum.com" target="_blank" class="grey-text text-lighten-4 waves-effect waves-teal btn-flat">Visit Product Site</a></li>
+                    <li><a href="http://www.one-click-forum.com/support/" target="_blank" class="grey-text text-lighten-4 waves-effect waves-teal btn-flat">Support Center</a></li>
+                </ul>
+                <ul id="social">
+                    <li><a href="http://twitter.com/creative8dreams" target="_blank"><img src="images/twitter-24.png" alt="" /></a></li>
+                    <li><a href="http://themeforest.net/user/CreativeDreams" target="_blank"><img src="images/envato-24.png" alt="" /></a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script>if (!window.jQuery) { document.write('<script src="js/jquery-2.1.1.min.js"><\/script>'); }
+    </script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    </script>
+  </body>
+</html>

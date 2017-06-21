@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>Forum | One Click Documentation</title>
+    <meta name="description" content="One Click Forum">
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#EE6E73">
+    <!-- CSS-->
+    <link href="css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+
+    <header>
+
+      <nav class="top-nav">
+        <div class="container">
+          <div class="nav-wrapper"><a class="page-title">Forum</a></div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <a href="#" data-activates="nav-mobile" class="button-collapse top-nav"><i class="mdi-navigation-menu"></i></a>
+      </div>
+
+      <ul id="nav-mobile" class="side-nav fixed">
+        <li class="logo"><a id="logo-container" href="index.html" class="brand-logo"><img src="images/logo.png" alt="ONE CLICK FORUM" /></a></li>
+        <li class="bold"><a href="files.html" class="waves-effect waves-teal">Files</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li class="bold"><a class="collapsible-header waves-effect waves-teal">Installation</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="one-click-installation.html">One Click Installation</a></li>
+                  <li><a href="installation-form.html">Installation Form</a></li>
+                  <li><a href="manual-installation.html">Manual Installation</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Customization</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="theme-options.html">Theme Options</a></li>
+                  <li><a href="style-editor.html">Style Editor</a></li>
+                  <li><a href="preview-styles.html">Preview Styles</a></li>
+                  <li><a href="custom-style.html">Custom Style</a></li>
+                  <li><a href="import-export.html">Import & Export</a></li>
+                  <li><a href="edit-style-info.html">Edit Style Info</a></li>
+                  <li><a href="expandable-collapsible.html">Expandable & Collapsible</a></li>
+                  <li><a href="layout-selector.html">Layout Selector</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="bold"><a class="collapsible-header waves-effect waves-teal active">Settings</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="footer-sidebar.html">Footer & Sidebar</a></li>
+                  <li><a href="extra-pages.html">Extra Pages</a></li>
+                  <li><a href="plugins.html">Plugins</a></li>
+                  <li><a href="translations.html">Translations</a></li>
+                  <li class="active"><a href="forum.html">Forum</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="bold"><a href="history.html" class="waves-effect waves-teal">History</a></li>
+      </ul>
+    </header>
+
+    <main>
+
+      <div class="section">
+        <div class="container">
+          <div class="row">
+
+            <div class="col s12 m9 l10">
+
+                <p>Just before you start using your forum, you need to settle these last settings:</p>
+
+                <h5>Users Registration</h5>
+                <i class="path" class="path" style="margin-left: 0;">VANILLA BACKOFFICE > USERS > REGISTRATION</i>
+                <p>You need to define how users are going to register in your forum:</p>
+                <ul style="margin-left: 5%;">
+                    <li>
+                        <h5>Basic</h5>
+                        <p style="margin: -10px 0 0; color: #999; font-size: 12px;">New users fill out a simple form and are granted access immediately.</p>
+                        <p style="margin: 5px 0 30px;">If you want to create a open forum, where any user can create discussions and post comments, then this is the right choice.<br>You must get an reCAPTCHA API key from <a href="https://www.google.com/recaptcha/admin/create" target="_blank">https://www.google.com/recaptcha/admin/create</a>).</p>
+                    </li>
+                    <li>
+                        <h5>Approval</h5>
+                        <p style="margin: -10px 0 0; color: #999; font-size: 12px;">New users are reviewed and approved by an administrator (that's you!).</p>
+                        <p style="margin: 5px 0 30px;">If you want to control which users are allowed to create discussions and post comments</p>
+                    </li>
+                    <li>
+                        <h5>Invitation</h5>
+                        <p style="margin: -10px 0 0; color: #999; font-size: 12px;">Existing members send invitations to new members.</p>
+                        <p style="margin: 5px 0 30px;">If you want to create a strict private forum where only existing members send invitations to new members.</p>
+                    </li>
+                    <li>
+                        <h5>Connect</h5>
+                        <p style="margin: -10px 0 0; color: #999; font-size: 12px;">New users are only registered through SSO plugins.</p>
+                        <p style="margin: 5px 0 30px;">If you want users to only login through an external aplication, like Facebook, Twitter or another system, this is the right choice. All register process will be made externaly and this will only allows the login through those services.</p>
+                    </li>
+                    <li>
+                        <h5>Envato</h5>
+                        <p style="margin: -10px 0 0; color: #999; font-size: 12px;">New users needs an Envato Item Purchase Code.</p>
+                        <p style="margin: 5px 0 30px;">If you wish a forum that only allows people who have bought your Envato product, then this is the right choice.<br>You will need to set your Envato Username and your <a href="#modal1" class="modal-trigger">Envato API Key</a>.</p>
+                    </li>
+                </ul>
+                <div id="modal1" class="modal" style="max-width: 800px;">
+                    <img src="images/envato_api_key.jpg" alt=""class="responsive-img" />
+                </div>
+
+                <h5 style="margin-top: 50px;">Social Login</h5>
+                <i class="path" class="path" style="margin-left: 0;">VANILLA BACKOFFICE > FORUM > SOCIAL</i>
+                <p>If you want your users to be abble to login using Facebook or Twitter:</p>
+                <div style="margin-left: 5%;">
+                    <p>You need to Enable the social connection you want to configure, and then click on the settings buttons and follow instructions.<br>For more information please see the <a href="http://blog.vanillaforums.com/news/how-to-integrate-twitter-and-facebook/" target="_blank">How to Integrate Twitter and Facebook to Vanilla Forums</a> post.</p>
+                </div>
+
+                <h5 style="margin-top: 50px;">Categories</h5>
+                <i class="path" class="path" style="margin-left: 0;">VANILLA BACKOFFICE > FORUM > CATEGORIES</i>
+                <p>You need create the categories structure so that your forum discussions stay organized and users can find what they are looking for faster:</p>
+                <ol>
+                    <li>click the Add Category button</li>
+                    <li>fill up the Category name</li>
+                    <li>add a Description</li>
+                    <li>click Save</li>
+                    <li>after you create the necessary categories, you can organize them by drag & drop the items</li>
+                </ol>
+
+                <h5 style="margin-top: 50px;">Advanced</h5>
+                <i class="path" style="margin-left: 0;">VANILLA BACKOFFICE > FORUM > ADVANCED</i>
+                <p>Set this general forum configuration to your like:</p>
+                 <ul style="margin-left: 5%;">
+                    <li>
+                        <h5>Discussions per Page</h5>
+                        <p style="margin: -10px 0 0; color: #999; font-size: 12px;">default: 30</p>
+                        <p style="margin: 5px 0 30px;">This configures how many discussions per page will appear on the discussions list page. A pagination will be automatically added if the number of discussions is greater than the defined.</p>
+                    </li>
+                    <li>
+                        <h5>Comments per Page</h5>
+                        <p style="margin: -10px 0 0; color: #999; font-size: 12px;">default: 30</p>
+                        <p style="margin: 5px 0 30px;">This configures how many comments will appear on the discussions item page. A pagination will be automatically added if the number of comments is greater than the defined.</p>
+                    </li>
+                    <li>
+                        <h5>Discussion & Comment Editing</h5>
+                        <p style="margin: -10px 0 0; color: #999; font-size: 12px;">default: Authors may edit for 1 hour</p>
+                        <p style="margin: 5px 0 30px;">This defines how much time does a user have to edit a specific discussion or a comment that he inserted. After that time, the discussion or comment will be considered valid and fixed.</p>
+                    </li>
+                    <li>
+                        <h5>Archive Discussions</h5>
+                        <p style="margin: -10px 0 0; color: #999; font-size: 12px;">default: (empty)</p>
+                        <p style="margin: 5px 0 30px;">If you have a forum with a lot old of discssions and they aren't relevant no more, you can define a date in which those discussions will be closed. Despite being closed, they are shown to the users, but users can't insert any comments no more.</p>
+                    </li>
+                    <li>
+                        <h5>Exclude archived discussions from the discussions list</h5>
+                        <p style="margin: -10px 0 0; color: #999; font-size: 12px;">default: UNCHECKED</p>
+                        <p style="margin: 5px 0 30px;">This option hides the archived discussion mention above. So discussions are closed and also hidden to the users.</p>
+                    </li>
+                    <li>
+                        <h5>Enable admin checkboxes on discussions and comments.</h5>
+                        <p style="margin: -10px 0 0; color: #999; font-size: 12px;">default: CHECKED</p>
+                        <p style="margin: 5px 0 30px;">If checked, it will show checkboxes on the discussions and comments, that allows the admin to select multiple items and make some action to it, like delete, move, merge, etc.</p>
+                    </li>
+                </ul>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="page-footer blue-grey darken-3">
+        <div class="footer-links row">
+            <a id="footer-installation" href="one-click-installation.html" class="col s4 selected">1. INSTALLATION</a>
+            <a id="footer-customization" href="theme-options.html" class="col s4 selected">2. CUSTOMIZATION</a>
+            <a id="footer-settings" href="footer-sidebar.html" class="col s4 selected">3. SETTINGS</a>
+        </div>
+        <div class="footer-copyright">
+          <div class="container" style="overflow: hidden; ">
+            <div id="copyright" class="left center">
+                © 2015 <a href="http://www.creativedreams.eu" target="_blank" class="grey-text text-lighten-4">CREATIVE DREAMS</a>, ALL RIGHTS RESERVED.
+            </div>
+            <div class="right center">
+                <ul id="links">
+                    <li><a href="http://www.one-click-forum.com" target="_blank" class="grey-text text-lighten-4 waves-effect waves-teal btn-flat">Visit Product Site</a></li>
+                    <li><a href="http://www.one-click-forum.com/support/" target="_blank" class="grey-text text-lighten-4 waves-effect waves-teal btn-flat">Support Center</a></li>
+                </ul>
+                <ul id="social">
+                    <li><a href="http://twitter.com/creative8dreams" target="_blank"><img src="images/twitter-24.png" alt="" /></a></li>
+                    <li><a href="http://themeforest.net/user/CreativeDreams" target="_blank"><img src="images/envato-24.png" alt="" /></a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script>if (!window.jQuery) { document.write('<script src="js/jquery-2.1.1.min.js"><\/script>'); }
+    </script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script>
+    $(document).ready(function(){
+        $('.modal-trigger').leanModal();
+    });
+    </script>
+    </script>
+  </body>
+</html>

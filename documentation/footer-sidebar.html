@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>Footer & Sidebar | One Click Documentation</title>
+    <meta name="description" content="One Click Forum">
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <!--  Android 5 Chrome Color-->
+    <meta name="theme-color" content="#EE6E73">
+    <!-- CSS-->
+    <link href="css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+
+    <header>
+
+      <nav class="top-nav">
+        <div class="container">
+          <div class="nav-wrapper"><a class="page-title">Footer & Sidebar</a></div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <a href="#" data-activates="nav-mobile" class="button-collapse top-nav"><i class="mdi-navigation-menu"></i></a>
+      </div>
+
+      <ul id="nav-mobile" class="side-nav fixed">
+        <li class="logo"><a id="logo-container" href="index.html" class="brand-logo"><img src="images/logo.png" alt="ONE CLICK FORUM" /></a></li>
+        <li class="bold"><a href="files.html" class="waves-effect waves-teal">Files</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            <li class="bold"><a class="collapsible-header waves-effect waves-teal">Installation</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="one-click-installation.html">One Click Installation</a></li>
+                  <li><a href="installation-form.html">Installation Form</a></li>
+                  <li><a href="manual-installation.html">Manual Installation</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Customization</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="theme-options.html">Theme Options</a></li>
+                  <li><a href="style-editor.html">Style Editor</a></li>
+                  <li><a href="preview-styles.html">Preview Styles</a></li>
+                  <li><a href="custom-style.html">Custom Style</a></li>
+                  <li><a href="import-export.html">Import & Export</a></li>
+                  <li><a href="edit-style-info.html">Edit Style Info</a></li>
+                  <li><a href="expandable-collapsible.html">Expandable & Collapsible</a></li>
+                  <li><a href="layout-selector.html">Layout Selector</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="bold"><a class="collapsible-header waves-effect waves-teal active">Settings</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li class="active"><a href="footer-sidebar.html">Footer & Sidebar</a></li>
+                  <li><a href="extra-pages.html">Extra Pages</a></li>
+                  <li><a href="plugins.html">Plugins</a></li>
+                  <li><a href="translations.html">Translations</a></li>
+                  <li><a href="forum.html">Forum</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="bold"><a href="history.html" class="waves-effect waves-teal">History</a></li>
+      </ul>
+    </header>
+
+    <main>
+
+      <div class="section">
+        <div class="container">
+          <div class="row">
+
+            <div class="col s12 m9 l10">
+
+                <p>After you install the forum, you will verify that the One Click theme comes with a default footer that you need to adjust to your needs.<br>
+                To do that, you simply need to edit the file:
+                </p>
+                <code style="margin-left: 30px;">SERVER_ROOT/public_html/YOUR_FORUM_DIR/themes/oneClick/views/footer.php</code>
+
+
+
+                <div style="margin: 30px 0; background-color: #F1F1F1; padding: 10px 20px;">
+
+                    <p>You have some html classes that you can use it:</p>
+
+                    <code style="color: rgba(0, 0, 0, 0.71);">
+                        <b>.responsive_img</b> - to make images responsive<br>
+                        <b>.row</b> - to create a row with columns inside<br>
+                        <b>.s1, .s1_2,.s1_3,.s2_3,.s1_4,.s1_5,.s2_5</b> - full, one half, one third, etc. columns for small displays<br>
+                        <b>.m1, .m1_2,.m1_3,.m2_3,.m1_4,.m1_5,.m2_5</b> - full, one half, one third, etc. columns for medium displays<br>
+                        <b>.l1, .l1_2,.l1_3,.l2_3,.l1_4,.l1_5,.l2_5</b> - full, one half, one third, etc. columns for large displays<br>
+                    </code>
+
+                    <p>If you want to add new classes it's recommended that you use the EXTRA CSS field from the <a href="style-editor.html">Style Editor</a>.</p>
+
+                </div>
+
+                <p>Optionally, if you want to add a banner or another element on the sidebar you can edit the file:</p>
+
+                <code style="margin-left: 30px;">SERVER_ROOT/public_html/YOUR_FORUM_DIR/themes/oneClick/views/sidebar.php</code>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="page-footer blue-grey darken-3">
+        <div class="footer-links row">
+            <a id="footer-installation" href="one-click-installation.html" class="col s4 selected">1. INSTALLATION</a>
+            <a id="footer-customization" href="theme-options.html" class="col s4 selected">2. CUSTOMIZATION</a>
+            <a id="footer-settings" href="footer-sidebar.html" class="col s4 selected">3. SETTINGS</a>
+        </div>
+        <div class="footer-copyright">
+          <div class="container" style="overflow: hidden; ">
+            <div id="copyright" class="left center">
+                © 2015 <a href="http://www.creativedreams.eu" target="_blank" class="grey-text text-lighten-4">CREATIVE DREAMS</a>, ALL RIGHTS RESERVED.
+            </div>
+            <div class="right center">
+                <ul id="links">
+                    <li><a href="http://www.one-click-forum.com" target="_blank" class="grey-text text-lighten-4 waves-effect waves-teal btn-flat">Visit Product Site</a></li>
+                    <li><a href="http://www.one-click-forum.com/support/" target="_blank" class="grey-text text-lighten-4 waves-effect waves-teal btn-flat">Support Center</a></li>
+                </ul>
+                <ul id="social">
+                    <li><a href="http://twitter.com/creative8dreams" target="_blank"><img src="images/twitter-24.png" alt="" /></a></li>
+                    <li><a href="http://themeforest.net/user/CreativeDreams" target="_blank"><img src="images/envato-24.png" alt="" /></a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script>if (!window.jQuery) { document.write('<script src="js/jquery-2.1.1.min.js"><\/script>'); }
+    </script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    </script>
+  </body>
+</html>

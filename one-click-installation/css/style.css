@@ -1,0 +1,1139 @@
+/*
+Theme Name: Creative Dreams
+Theme URI: http://creativedreams.eu
+Author: Creative Dreams
+Author URI: http://creativedreams.eu
+Description: Theme for Creative Dreams
+Version: 1.0
+*/
+
+/* ======================================================================== */
+||        TABLE OF CONTENTS:                                                ||
+||                                                                          ||
+||  1) NORMALIZE (http://necolas.github.com/normalize.css/)                 ||
+||  2) HEADER                                                               ||
+||  3) MAIN                                                                 ||
+||  4) SIDEBAR                                                              ||
+||  5) FOOTER                                                               ||
+||                                                                          ||
+/* ======================================================================== */
+
+
+/* ==========================================================================
+                            1) NORMALIZE
+   ========================================================================== */
+
+/* -------------------- HTML5 display definitions --------------------------- */
+
+/* Corrects `block` display not defined in IE 8/9. */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary { display: block; }
+
+/* Corrects `inline-block` display not defined in IE 8/9. */
+audio, canvas, video { display: inline-block; }
+
+/* Prevents modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
+audio:not([controls]) { display: none; height: 0; }
+
+/* Addresses styling for `hidden` attribute not present in IE 8/9. */
+[hidden] { display: none; }
+
+
+/* ---------------------------------- Base ------------------------------------ */
+
+/* 1. Sets default font family to sans-serif. 2. Prevents iOS text size adjust after orientation change, without disabling user zoom. */
+html { font-family: sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+/* Removes default margin. */
+body { margin: 0; }
+
+
+/* ---------------------------------- Links ------------------------------------ */
+
+/* Addresses `outline` inconsistency between Chrome and other browsers. */
+a:focus { outline: thin dotted; }
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/*
+ * Addresses `h1` font sizes within `section` and `article` in Firefox 4+,
+ * Safari 5, and Chrome.
+ */
+
+h1 {
+    font-size: 2em;
+}
+
+/*
+ * Addresses styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+/*
+ * Addresses style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+
+b,
+strong {
+    font-weight: bold;
+}
+
+/*
+ * Addresses styling not present in Safari 5 and Chrome.
+ */
+
+dfn {
+    font-style: italic;
+}
+
+/*
+ * Addresses styling not present in IE 8/9.
+ */
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+
+/*
+ * Corrects font family set oddly in Safari 5 and Chrome.
+ */
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
+/*
+ * Improves readability of pre-formatted text in all browsers.
+ */
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/*
+ * Sets consistent quote types.
+ */
+
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/*
+ * Addresses inconsistent and variable font size in all browsers.
+ */
+
+small {
+    font-size: 80%;
+}
+
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * Removes border when inside `a` element in IE 8/9.
+ */
+
+img {
+    border: 0;
+}
+
+/*
+ * Corrects overflow displayed oddly in IE 9.
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+
+/*
+ * Addresses margin not present in IE 8/9 and Safari 5.
+ */
+
+figure {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+/*
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+    border: 0; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/*
+ * 1. Corrects font family not being inherited in all browsers.
+ * 2. Corrects font size not being inherited in all browsers.
+ * 3. Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
+ */
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 2 */
+    margin: 0; /* 3 */
+}
+
+/*
+ * Addresses Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+button,
+input {
+    line-height: normal;
+}
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+}
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+/*
+ * 1. Addresses box sizing set to `content-box` in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/*
+ * Removes inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE 8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+/*
+ * Remove most spacing between table cells.
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Basic Elements & Classes
+/* ---------------------------------------------------------------------- */
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('OpenSans/OpenSans-Light-webfont.eot');
+    src: url('OpenSans/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans/OpenSans-Light-webfont.woff') format('woff'),
+         url('OpenSans/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('OpenSans/OpenSans-Light-webfont.svg#open_sans') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('OpenSans/OpenSans-LightItalic-webfont.eot');
+    src: url('OpenSans/OpenSans-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans/OpenSans-LightItalic-webfont.woff') format('woff'),
+         url('OpenSans/OpenSans-LightItalic-webfont.ttf') format('truetype'),
+         url('OpenSans/OpenSans-LightItalic-webfont.svg#open_sans') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('OpenSans/OpenSans-Regular-webfont.eot');
+    src: url('OpenSans/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans/OpenSans-Regular-webfont.woff') format('woff'),
+         url('OpenSans/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('OpenSans/OpenSans-Regular-webfont.svg#open_sans') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('OpenSans/OpenSans-Bold-webfont.eot');
+    src: url('OpenSans/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans/OpenSans-Bold-webfont.woff') format('woff'),
+         url('OpenSans/OpenSans-Bold-webfont.ttf') format('truetype'),
+         url('OpenSans/OpenSans-Bold-webfont.svg#open_sans') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+html{
+    overflow-y: scroll;
+}
+
+body {
+	background: #eee;
+	color: #555555;
+    font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
+}
+
+::-moz-selection { background: #f15a23; color: #fff; text-shadow: none; }
+::selection { background: #f15a23; color: #fff; text-shadow: none; }
+
+h1, h2, h3, h4, h5, h6 {
+	color: #474747;
+	font-weight: 400;
+	line-height: 1.25;
+	margin-bottom: 15px;
+}
+
+h3, h4, h5 { font-weight: 600; }
+
+a, a > * {
+	color: #0288D1;
+	text-decoration: none;
+	-webkit-transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+	   -moz-transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+	    -ms-transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+	     -o-transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+	        transition: background-color .2s ease, border .2s ease, color .2s ease, opacity .2s ease-in-out;
+}
+
+a:hover, a > *:hover { color: #0277BD; }
+
+hr {
+	background: #efefef;
+	color: #efefef;
+	margin: 5px 0 25px;
+}
+
+hr.dotted {
+    margin: 30px 0 25px;
+    height: 1px;
+    background: #fff url(../images/hr-dotted.png) scroll repeat-x left top;
+    border: none;
+}
+
+	p + hr { margin: 25px 0 20px; }
+
+blockquote {
+	background: #f8f8f8 url(../images/quote.png) no-repeat 17px 21px;
+	font-style: italic;
+	font-size: 15px;
+	line-height: 1.6;
+	padding: 20px 20px 20px 55px;
+}
+
+	blockquote.simple {
+		background: none;
+		border-left: 2px solid #ddd;
+		color: #bbb;
+		font-size: 13px;
+		margin: 0;
+		padding: 0 0 0 10px;
+	}
+
+	blockquote p:last-of-type { margin-bottom: 0; }
+
+	blockquote small { font-size: 12px; }
+
+.button, input[type="submit"], input[type="reset"], button {
+	background: #f15a23;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	font-weight: 400;
+	height: auto;
+	overflow: visible;
+	padding: 7px 20px;
+	-webkit-transition: background-color .2s ease;
+	   -moz-transition: background-color .2s ease;
+		-ms-transition: background-color .2s ease;
+		 -o-transition: background-color .2s ease;
+			transition: background-color .2s ease;
+	width: auto;
+}
+
+	.button:hover, input[type="submit"]:hover, input[type="reset"]:hover, button:hover {
+		background: #3a3a3a;
+		color: #fff;
+	}
+
+.button {
+	font-size: 12px;
+	display: inline-block;
+	padding: 5px 16px;
+}
+
+	.button.medium { font-size: 13px; }
+
+	.button.large { font-size: 15px; }
+
+	.button.no-bg {
+		background: none;
+		color: #3a3a3a;
+		padding: 0;
+	}
+
+		.button.no-bg:hover, #footer .button.no-bg:hover {
+			background: none;
+			color: #f15a23;
+		}
+
+	.button .icon, .button .arrow {
+		color: transparent;
+		cursor: pointer;
+		display: inline-block;
+		font: 0/0 a;
+		height: 19px;
+		margin: -3px 0 0 3px;
+		text-shadow: none;
+		vertical-align: middle;
+		width: 19px;
+	}
+
+	.ie7 .button .icon, .ie7 .button .arrow { display: inline; }
+
+	.button .arrow { background: #ddd url(../images/button-arrows.png) no-repeat 0 0; }
+
+	.button .icon.left, .button .arrow.left {
+		margin-left: 0;
+		margin-right: 3px;
+	}
+
+	.button .arrow.left { background-position: 0 -19px; }
+
+		.button:hover .arrow { background-color: #f15a23; }
+
+.dropcap {
+	background: #eaeaea;
+	color: #777;
+	display: inline-block;
+	float: left;
+	font-size: 23px;
+	font-weight: 600;
+	height: 36px;
+	line-height: 36px;
+	margin: 0 7px 0 0;
+	text-align: center;
+	width: 36px;
+}
+
+	.dropcap.dark {
+		background: #3a3a3a;
+		color: #fff;
+	}
+
+.infobox {
+	background: #fbfbfb;
+	border: 1px solid #efefef;
+	margin: 0 0 20px;
+	padding: 25px;
+}
+
+	.infobox .one-half { width: 434px; }
+
+	.infobox .one-third { width: 282px; }
+
+		 .infobox .two-third { width: 586px; }
+
+	.infobox .one-fourth { width: 207px; }
+
+		.infobox .three-fourth { width: 661px; }
+
+.single-image, .image-gallery, .iframe {
+	cursor: pointer;
+	margin-bottom: 5px;
+}
+
+.single-image.none, .image-gallery.none, .iframe.none,
+.single-image.none img, .image-gallery.none img, .iframe.none img {
+	display: inline;
+	margin-bottom: 0;
+	overflow: visible;
+}
+
+	.single-image.align-left, .image-gallery.align-left, .iframe.align-left { margin-bottom: 15px; margin-right: 15px; }
+	.single-image.align-right, .image-gallery.align-right, .iframe.align-right { margin-bottom: 15px; margin-left: 15px; }
+
+	.single-image img, .image-gallery img, .iframe img { margin-bottom: -5px; }
+
+	.single-image .zoom, .image-gallery .zoom, .iframe .zoom {
+		background: rgb(255, 255, 255);
+		background: rgba(255, 255, 255, 0.4);
+		color: transparent;
+		display: block;
+		font: 0/0 a;
+		height: 0;
+		left: 0;
+		filter: alpha(opacity=0);
+		opacity: 0;
+		position: absolute;
+		text-shadow: none;
+		top: 0;
+		-webkit-transition: opacity .2s ease-in-out;
+		   -moz-transition: opacity .2s ease-in-out;
+			-ms-transition: opacity .2s ease-in-out;
+			 -o-transition: opacity .2s ease-in-out;
+				transition: opacity .2s ease-in-out;
+		width: 0;
+	}
+
+	.single-image .zoom:before, .image-gallery .zoom:before, .iframe .zoom:before {
+		background: url(../images/zoom.png) no-repeat;
+		content: '';
+		display: block;
+		position: absolute;
+		height: 58px;
+		margin: -29px 0 0 -29px;
+		left: 50%;
+		top: 50%;
+		width: 58px;
+	}
+
+	.single-image.video .zoom:before, .image-gallery.video .zoom:before, .iframe.video .zoom:before {
+		background-image: url(../images/zoom-video.png);
+	}
+
+	.single-image.link .zoom:before, .image-gallery.link .zoom:before, .iframe.link .zoom:before {
+		background-image: url(../images/zoom-link.png);
+	}
+
+	.single-image:hover .zoom, .image-gallery:hover .zoom, .iframe:hover .zoom {
+		filter: alpha(opacity=40);
+		opacity: 1;
+	}
+
+
+#options{
+    position: absolute;
+    top: 0px;
+    left: -50px;
+    display: inline-block;
+    width: 50px;
+}
+
+#close-options{
+    position: absolute;
+    top: 5px;
+    right: -20px;
+    color: #ccc;
+}
+
+
+/* ==========================================================================
+                             2) GENERAL
+   ========================================================================== */
+
+h1{
+    margin: 0;
+    padding: 0;
+
+}
+
+p{
+    margin: 0 0 18px 0;
+}
+
+hr{
+    clear: both;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #fff;
+    border-left: none;
+    border-right: none;
+    line-height: 1px;
+}
+
+
+/* ==========================================================================
+                            3) HEADER
+   ========================================================================== */
+#header-container{
+    background-color: #2196F3;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+#header{
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+#logo{
+    float: left;
+    margin: 0 30px;
+    padding: 16px 0;
+    line-height: 0;
+}
+#logo img{
+    width: autos;
+    height: 32px;
+}
+
+#main-menu{
+    float: right;
+    margin: 8px 30px;
+}
+#main-menu ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+#main-menu li{
+    float: left;
+    line-height: 0;
+}
+#main-menu li:last-child{
+    float: left;
+    background: none;
+}
+#main-menu li a{
+    display: inline-block;
+    margin: 0 6px;
+    padding: 0 16px;
+    color: #fff;
+    height: 48px;
+    line-height: 48px;
+    font-size: 16px;
+    border-radius: 2px;
+    transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s; /* Firefox 4 */
+    -webkit-transition: all 0.5s ease 0s; /* Safari and Chrome */
+    -o-transition: all 0.5s ease 0s; /* Opera */
+    outline: none;
+}
+#main-menu li a:hover{
+    background-color: #1976D2;
+}
+#main-menu li.active a{
+    background-color: #1976D2;
+}
+
+#main-menu li #twitter,
+#main-menu li #envato{
+    display: inline-block;
+    margin: 12px 5px;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    line-height: 0;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+    overflow: hidden;
+}
+#main-menu li #twitter:hover,
+#main-menu li #envato:hover{
+    background-color: transparent;
+    transform: rotate(360deg);
+}
+
+/* ==========================================================================
+                            4) MAIN
+   ========================================================================== */
+
+#main-container{
+    clear: both;
+    margin: 0 auto;
+    padding: 0;
+    width: 708px;
+}
+
+#breadcrumb{
+    margin: 0;
+    padding: 10px 0 30px;
+    list-style: none;
+}
+#breadcrumb li{
+    float: left;
+}
+
+#main{
+    margin: 48px 0;
+    overflow: hidden;
+    float: right !important;
+}
+#main header{
+    margin-top: -15px;
+    padding: 0;
+    height: 60px;
+    border-bottom: 3px solid #f5f5f5;
+}
+#main header h1{
+    display: inline-block;
+    margin: 0 0 0 0px;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 60px;
+    color: #555;
+}
+
+#content{
+    margin: 30px 0 0;
+}
+
+.box{
+    width: 708px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-sizing:border-box;
+    *behavior: url(css/boxsizing.htc);
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+
+.small{
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+.tiny{
+    font-size: 9px;
+    line-height: 12px;
+}
+
+#installation_form{
+
+}
+#installation_form label{
+    display: block;
+    margin-bottom: 2px;
+    font-size: 11px;
+    line-height: 12px;
+    color: #999;
+    text-transform: uppercase;
+}
+#installation_form label a{
+    text-transform: none;
+}
+#installation_form input[type=text]{
+    display: block;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    font-size: 14px;
+    line-height: 18px;
+    border: 1px solid #ccc;
+    width: 626px;
+}
+#installation_form select{
+    display: block;
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 28px;
+    height: 28px;
+    border: 1px solid #ccc;
+}
+#installation_form input[type=text]:focus,
+#installation_form select:focus{
+    border: 1px solid #03A9F4;
+}
+#installation_form input[type=text].w1_2{
+    float: none;
+    width: 287px;
+}
+#installation_type_description{
+    color: #999;
+    font-size: 11px;
+}
+#installation_form h3{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    margin: 15px 0 10px;
+}
+#installation_form ul{
+    margin: 0;
+    padding: 0 0 0 20px;
+    list-style: none;
+}
+#installation_form ul li{
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #0288d1;
+}
+#installation_form ul li span.download{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    background: url(../images/download.gif) scroll no-repeat center center;
+    text-indent: -9999px;
+}
+#installation_form ul li span.extract{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    background: url(../images/extract.gif) scroll no-repeat center center;
+    text-indent: -9999px;
+}
+#installation_form ul li span.copy{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    background: url(../images/copy.gif) scroll no-repeat center center;
+    text-indent: -9999px;
+}
+#installation_form ul li span.activate{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    background: url(../images/activate.gif) scroll no-repeat center center;
+    text-indent: -9999px;
+}
+#installation_form ul li input[type=checkbox]{
+    margin-right: 8px;
+    width: 13px;
+    height: 13px;
+    margin-top: 2px;
+    line-height: 18px;
+    vertical-align: top;
+}
+#installation_form ul li a{
+    text-decoration: none;
+}
+#installation_form ul li a:hover{
+    text-decoration: underline;
+}
+#installation_form ul li div{
+    font-size: 10px;
+    line-height: 18px;
+    color: #999;
+    margin-left: 21px;
+}
+#installation_options{
+    margin-top: 20px;
+    padding: 15px 30px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+#view_log,
+#hide_log{
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+#installation_log{
+    padding: 15px 30px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+#installation_log ul{
+    list-style: none;
+}
+#installation_log ul li{
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 18px;
+    /*color: #0288d1;*/
+}
+#installation_log ul li span.downloading{
+    display: inline-block;
+    height: 16px;
+    font-size: 11px;
+    color: #ec0089;
+    margin-right: 5px;
+    padding-left: 21px;
+    background: url(../images/downloading.gif) scroll no-repeat left center;
+    text-indent: -9999px;
+}
+#installation_log ul li span.extracting{
+    display: inline-block;
+    height: 16px;
+    font-size: 11px;
+    color: #ec0089;
+    margin-right: 5px;
+    padding-left: 21px;
+    background: url(../images/extracting.gif) scroll no-repeat left center;
+    text-indent: -9999px;
+}
+#installation_log ul li span.copying{
+    display: inline-block;
+    height: 16px;
+    font-size: 11px;
+    color: #ec0089;
+    margin-right: 5px;
+    padding-left: 21px;
+    background: url(../images/copying.gif) scroll no-repeat left center;
+    text-indent: -9999px;
+}
+#installation_log ul li span.activating{
+    display: inline-block;
+    height: 16px;
+    font-size: 11px;
+    color: #ec0089;
+    margin-right: 5px;
+    padding-left: 21px;
+    background: url(../images/activating.gif) scroll no-repeat left center;
+    text-indent: -9999px;
+}
+#installation_log ul li span.check{
+    display: inline-block;
+    height: 16px;
+    font-size: 11px;
+    color: #0288d1;
+    margin-right: 5px;
+    padding-left: 21px;
+    background: url(../images/check.png) scroll no-repeat left center;
+    text-indent: -9999px;
+}
+#installation_log ul li span.cross{
+    display: inline-block;
+    height: 16px;
+    font-size: 11px;
+    color: #FF0000;
+    margin-right: 5px;
+    padding-left: 21px;
+    background: url(../images/cross.png) scroll no-repeat left center;
+    text-indent: -9999px;
+}
+#installation_log ul li span.magenta{
+    display: inline-block;
+    height: 16px;
+    font-size: 11px;
+    color: #ec0089;
+    margin-left: 5px;
+}
+#installation_log ul li span.green{
+    display: inline-block;
+    height: 16px;
+    font-size: 11px;
+    color: #98C73D;
+    margin-left: 5px;
+}
+#installation_log ul li span.red{
+    display: inline-block;
+    height: 16px;
+    font-size: 11px;
+    color: #FF0000;
+    margin-left: 5px;
+}
+
+#one_click_installation{
+    display: inline-block;
+	background: #4CAF50;
+	border: none;
+    border-radius: 2px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.20);
+	color: #fff;
+    text-align: center;
+	cursor: pointer;
+    font-size: 18px;
+	font-weight: 400;
+	overflow: visible;
+	padding: 15px 30px;
+	-webkit-transition: background-color .2s ease;
+	   -moz-transition: background-color .2s ease;
+		-ms-transition: background-color .2s ease;
+		 -o-transition: background-color .2s ease;
+			transition: background-color .2s ease;
+}
+#one_click_installation:hover {
+    background: #43A047;
+    color: #fff;
+}
+
+#one_click_installation div{
+    font-weight: 400;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.alert_msg{
+    position: relative;
+    margin: 20px 0 0;
+    padding: 30px;
+    background: #FF9800;
+}
+
+.ok_msg{
+    position: relative;
+    margin: 20px 0 0;
+    padding: 30px;
+    background: #4CAF50;
+}
+
+.error_msg{
+    position: relative;
+    margin: 20px 0 0;
+    padding: 30px;
+    background: #F44336;
+}
+
+.alert_msg h2,
+.error_msg h2,
+.ok_msg h2{
+    margin: 0 0 15px 0;
+    color: #fff;
+}
+.alert_msg p,
+.error_msg p,
+.ok_msg p{
+    color: #fff;
+}
+.alert_msg p:last-child,
+.error_msg p:last-child,
+.ok_msg p:last-child{
+    margin-bottom: 0;
+}
+.error_msg a,
+.ok_msg a{
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#installation_log_msg .button{
+    font-weight: 400;
+    color: #FFFFFF;
+    background-color: #388e3c;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+#installation_log_msg .button:hover{
+    background-color: #2e7d32;
+}
+#installation_log_msg .button:active{
+    background-color: #1b5e20;
+}
